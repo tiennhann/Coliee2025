@@ -76,9 +76,6 @@ class CollieDataset(Dataset):
         
         if dev_folder is not None:
             self._dev = parse_all_xml_files(dev_folder)
-        self._dev = examples[len(examples) * split_percent // 100: ]
-
-
 
 if __name__ == "__main__":
     parsed_records = parse_xml_file(sys.argv[1])
